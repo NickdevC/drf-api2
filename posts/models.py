@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class post(models.Model):
+class Post(models.Model):
     """
     Post model, related to 'owner', i.e. a User instance.
     Default image set so that we can always reference image.url.
@@ -13,7 +13,7 @@ class post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to = 'images/', default= '../default_profile_ltj9uu',
+        upload_to='images/', default='../default_profile_ltj9uu',
         blank=True
     )
 
